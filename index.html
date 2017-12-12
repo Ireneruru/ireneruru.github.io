@@ -1,111 +1,383 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0039)http://net.pku.edu.cn/~daim/junjie.yao/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Hector Garcia-Molina</title>	
-		<link href="http://infolab.stanford.edu/~hector/HomePage/style.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="js/cufon-yui.js"></script>
-		<script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
-		<script type="text/javascript" src="js/cuf_run.js"></script>
-		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
-		<script type="text/javascript" src="js/radius.js"></script>
-	</head>
+<title>Yiru Chen(陈一茹)</title>
+<style type="text/css">
+<!--
+body {
+  font: 85%/1.4 Verdana, Arial, Helvetica, sans-serif;
+  /*background:#DDF0F8 ;*/
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+/* ~~ 元素/标签选择器 ~~ */
+ul, ol, dl { 
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;   /* 删除上边距可以解决边距会超出其包含的 div 的问题。剩余的下边距可以使 div 与后面的任何元素保持一定距离。 */
+  padding-right: 15px;
+  padding-left: 15px; /* 向 div 内的元素侧边（而不是 div 自身）添加填充可避免使用任何方框模型数学。此外，也可将具有侧边填充的嵌套 div 用作替代方法。 */
+}
+a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+  border: none;
+}
+
+/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
+a:link {
+  color:#414958;
+  text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+}
+a:visited {
+  color: #4E5869;
+  text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+  text-decoration: none;
+}
+
+/* ~~ 此容器包含所有其它 div，并依百分比设定其宽度 ~~ */
+.container {
+  width: 100%;
+  max-width: 1260px;/* 可能需要最大宽度，以防止此布局在大型显示器上过宽。这将使行长度更便于阅读。IE6 不遵循此声明。 */
+  min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
+  /*margin: 0 auto; *//* 侧边的自动值与宽度结合使用，可以将布局居中对齐。如果将 .container 宽度设置为 100%，则不需要此设置。 */
+}
+
+/* ~~ 标题未指定宽度。它将扩展到布局的完整宽度。标题包含一个图像占位符，该占位符应替换为您自己的链接徽标 ~~ */
+.header {
+  position:relative;
+  width:100%; 
+  height:350px;
+}
+#header-image {
+  position:absolute;
+  top:100 px;
+  left:0 px;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 350px;
+  height: 350px;
+}
+#header-content {
+  position:absolute;
+  top:10 px;
+  /*  right:0px; */
+  left: 370px;
+  width: 70%;
+  height: 200px
+  text-align:left;
+  height: 350px;
+  /*line-height: 100%;*/ /* 行间距 */
+}
+
+.sidebar1 {
+  float: left;
+  width: 17%;
+        padding-top: 120px;
+  padding-bottom: 10px;
+}
+.content {
+  padding: 40px 20px;
+  width: 78%;
+  float: left;
+}
+
+/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
+.content ul, .content ol { 
+  padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+
+/* ~~ 导航列表样式（如果选择使用预先创建的 Spry 等弹出菜单，则可以删除此样式） ~~ */
+ul.nav {
+  list-style: none; /* 这将删除列表标记 */
+  /* border-top: 1px solid #666; */ /* 这将为链接创建上边框 – 使用下边框将所有其它项放置在 LI 中 */
+  margin-bottom: 15px; /* 这将在下面内容的导航之间创建间距 */
+}
+ul.nav li {
+  /* border-top: 1px solid #666;*/ /* 这将创建按钮间隔 */
+  /* border-bottom: 1px solid #666;*/ /* 这将创建按钮间隔 */
+        display: inline; /* horizontal */
+}
+ul.nav a, ul.nav a:visited { /* 对这些选择器进行分组可确保链接即使在访问之后也能保持其按钮外观 */
+  padding: 5px 20px 5px 20px;
+  /* display: block; */ /* 这将为链接赋予块属性，使其填满包含它的整个 LI。这样，整个区域都可以响应鼠标单击操作。 */
+  text-decoration: none;
+  /* background: #A3C159; */
+  color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* 这将更改鼠标和键盘导航的背景和文本颜色 */
+  background: #009193; 
+  color: #FFF; 
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+ul.nav li {
+    float: left;
+}
+
+ul.nav li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.nav a:hover:not(.active) {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.nav .active {
+    background-color:#4CAF50;
+}
+
+/* ~~ 脚注 ~~ */
+.footer {
+  padding: 10px 0;
+  background: #CCC;
+  position: relative;/* 这可以使 IE6 hasLayout 以正确方式进行清除 */
+  clear: both; /* 此清除属性强制 .container 了解列的结束位置以及包含列的位置 */
+}
+
+/* ~~ 其它浮动/清除类 ~~ */
+.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+  float: right;
+  margin-left: 8px;
+}
+.fltlft { /* 此类可用于在页面中使元素向左浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+  float: left;
+  margin-right: 8px;
+}
+.clearfloat { /* 如果从 #container 中删除或移出了 #footer，则可以将此类放置在 <br /> 或空 div 中，作为 #container 内最后一个浮动 div 之后的最终元素 */
+  clear:both;
+  height:0;
+  font-size: 1px;
+  line-height: 0px;
+}
+-->
+</style><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* 此 1px 负边距可以放置在此布局中的任何列中，且具有相同的校正效果。 */
+ul.nav a { zoom: 1; }  /* 缩放属性将为 IE 提供其需要的 hasLayout 触发器，用于校正链接之间的额外空白 */
+</style>
+<![endif]-->
+</head>
+
 <body>
 
-<!-- Begin Header -->
-
-<div class="main">
-  <div class="header">
-    <div class="header_resize">
-      <div class="logo">
-        <h1> <a href="index.html">Yiru Chen(陈一茹) <small> Senior Student, Computer Science and Electrical Engineering Departments of Peking University </small></a></h1>
-        <p align="center">
-        	<img src="img/profile.jpg" alt="Yiru Chen" class="hbg_img" align="center">
-        </p>
-    </div>
-   	<div class="menu">
-   		<div class="menu_nav">
- 			<ul>
-          		<li><a href="#">Home</a></li>
-         		<li><a href="http://infolab.stanford.edu/~hector/HomePage/interests.html">Current Interests</a></li>
-			</ul>
-      	</div>
-     </div>
-     <div class="clr"></div>
-	 <div class="clr"></div>
-  </div>
+<div class="container">  
 </div>
-
-
-<!--End Header-->
-<!--Begin Main Page-->
-
-<div class="content">
-   <div class="content_resize">
-      <div class="mainbar">
-         <div class="article">
-            <h2> Biographical Sketch </h2>
-            <div class="clr"></div>
-            <p>I am a senior student @ Peking University, advised by Tong Yang. 
-I am broadly interested in network measurement (or so-called data stream processing), networking systems, data processing systems. 
-Now I am taking intern in Minlan Yu's lab @ Yale University. </p>
-			
-
-      <p> <strong> Publications: </strong> 
-			You may search for my recent publications at <a href="http://pub-db.stanford.edu/">InfoLab Publications</a>. </p>
-        </div>
-        <div class="article"></div>     
-     </div>
-     
-     
-     <div class="sidebar">
-        <div class="gadget">
-         	<h2>Contact Information</h2>
-  			
-   			<strong> Phone:   </strong> +86 15210399868 
-  			<br />
-  			
-   			<strong>  Email:   </strong> chen1rupku@gmail.com
-        <br/>
-        OR chen1ru@pku.edu.cn
-  			<br />
-  			
-    		<strong> Address:  </strong>Department of Computer Science
-    		<br />
-    		
-          	&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;        
-          	Peking University
-          	<br />
-          	
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;           
-            No.5 Yiheyuan Road, Haidian District
-            <br />
-            
-            &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;                 
-            Beijing, P.R.China 10087
-			<br />
-			
- 
-		</div>
-        <div class="gadget"> </div>
-     </div>
-     <div class="clr"></div>
+  
+<div class="container">
+ <div class="header">
+   <div id="header-image">
+     <a href="./"><img src="./img/self.jpg" width="100%" style="background: #8090AB; display:block;position:relative;top:-10px;"></a>
    </div>
+   <div id="header-content">
+     <b style="font-size:32px; font:黑体"> Yiru Chen(陈一茹)</b>
+     <p>Senior Undergraduate Student </br> Peking University(PKU)</br> Advisor: <a href="http://net.pku.edu.cn/~cuibin/">Bin Cui</a> </p>
+
+     <p>I am now looking for a Ph.D. position.</p>
+
+     <p> <i>Please check out my CV for update-to-date information.</i> </p>
+     <tr>
+       <td>
+         &nbsp 
+         <a href="./data/cv.pdf">
+         <img src="./img/pdf.png" width="20" height="20">[Curriculum Vitae]</a> <br><br>
+       </td>
+    </tr> 
+     <table>
+      <tr>
+        <td valign="top"><b>E-mail: </b></td> 
+        <td><a href="mailto:chen1rupku@gmail.com">chen1rupku@gmail.com</a> OR <a href="mailto:chen1ru@pku.edu.cn">chen1ru@pku.edu.cn</a> <br></td>
+      </tr> 
+     
+       <tr>
+         <td valign="top"><b>Address:</b></td> 
+         <td><br> Room 309, Bldg 33, No.5 Yiheyuan Road, Haidian District, Beijing <br> </td>
+      </tr>
+     </table>     
+     </br>
+     </br>
+     </br>
+     <!-- <div class="sidebar1"> -->
+      <ul class="nav">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#pub">Publications</a></li>
+        <li><a href="#hor">Awards & Honors</a></li>
+      </ul>
+     <!-- </div> -->
+   </div>
+ </div>
+
+  
+<div id="div_wrap"> 
+   <div class="content">
+<div id="div_research">       
+  <a name="research"></a>
+    <h2>Research</h2>
+     <!--
+     <table>
+       <tr>
+         <td valign="top"><b>Interests: </b></td>
+         <td>The general area of machine learning, including large-scale ML algorithms, deep learning, machine reasoning, and their applications in natural language processing and computer vision. 
+              <br><br></td>
+      </tr>
+     </table>     
+     -->
+     <tr>
+         <td valign="top"><b>Interests: </b></td>
+         <td>Generally data and information system, specifically data analysis and database system. </tr>
+     </tr>
+     </br></br> 
+     <tr>
+       <td valign="top"><b>Academic Experience: </b></td> 
+        <ul>
+         <li>2017.10 - present, <b>Research Intern</b>, <a href="shttps://www.microsoft.com/en-us/research/group/social-computing-beijing/">Social Computing Group</a>, Microsoft Research Beijing.<br>
+           Mentor: <a href="https://www.microsoft.com/en-us/research/people/xingx/"> Dr. Xing Xie</a>
+         </li>
+         <li>2015.11 - present, <b>Research Assistant</b>, <a href="http://daim.pku.edu.cn">DAIM Group</a>, Peking Univ.<br>
+           Advisor: <a href="http://net.pku.edu.cn/~cuibin/">Prof. Cui Bin</a>
+         </li>
+         <li>
+          2017.6 - 2017.9, <b>Research Intern</b>, <a href="http://www.casos.cs.cmu.edu/">CASOS</a>, Carnegie Mellon Univ.<br>
+          Advisor: <a href="http://www.casos.cs.cmu.edu/carley.html">Prof. Kathleen Carley</a>
+         </li>
+         <li>
+          2016.4 - 2016.8, <b>GSOC Successful Student</b>, <a href="https://developers.google.com/open-source/gsoc/">Google Summer of Code 2016</a>, Google Inc.<br>
+         </li>
+         <li>
+          2016.4 - 2016.8, <b>GSOC Successful Student</b>, <a href="https://developers.google.com/open-source/gsoc/">Google Summer of Code 2016</a>, Google Inc.<br>
+         </li>
+        </ul>
+     </tr>  
+</div>
+    
+<div id="div_publication">
+<a name="pub"></a>
+ <h2>Publications</h2>
+  <ul>
+      <ul>
+        <li>
+          <b>MLog: Towards Declarative In-Database Machine Learning</b></br>
+          Xupeng Li, Bin Cui, <i>Yiru Chen</i>, Wentao Wu, Ce Zhang </br>
+          PVLDB 10 (2017) (Demonstration) 
+          [<a href="data/2017_VLDB_Demo.pdf" class="media mediafile mf_pdf" title="papers:2017_VLDB_Demo.pdf">paper</a>]
+        </li>
+        <li>
+          <b>On-Demand Service-Based Big Data Integration: Optimized for Research Collaboration</b></br>
+          Pradeeban Kathiravelu, <i>Yiru Chen</i>, Ashish Sharma, Helena Galhardas, Peter Van Roy, Luís Veiga</br>
+          VLDB Workshop on Data Management and Analytics for Medicine and Healthcare 2017
+          [<a href="./data/DMAH.pdf" class="media mediafile mf_pdf" title="papers:DMAH.pdf">paper</a>]
+        </li>
+        <li>
+          <b>PSFGAN: a generative adversarial network system for separating quasar point sources and host galaxy light</b></br>
+          Dominic Stark, Barthelemy Launet, Kevin Schawinski, Ce Zhang, Michael Koss, M. Dennis Turp, Lia F. Sartori, Hantian Zhang, <i>Yiru Chen</i>, and Anna K. Weigel</br>
+          Monthly Notices of the Royal Astronomical Society <b>(submitted)</b>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>
 
+<div id="div_hor">
+  <a name="hor"></a>
+<h2>Awards & Honors</h2>
 
+<ul>
 
+<li>
+ <b> IBM PhD Fellowship</b>, 2017-2018. <br>
+</li>
+
+<li>
+ <b> ACL2016 Outstanding Paper</b>, 2016. <br>
+</li>
+
+<li>
+ <b> GPA 1st/140</b>, CS Department, Peking University, 2014. <br>
+</li>
+
+<li>
+ <b> Excellence Award of Stars of Tomorrow Internship Program</b>, Microsoft Research Asia, 2014. <br>
+</li>
+
+<li>
+<b><a href="http://www.google.cn/intl/en/university/student/scholarship-recipients.html">Google Excellence Scholarship</a></b>, Google Inc., 2013. <br>
+110 students from Computer Science or Software Engineering all over China.
+</li>
+
+<li>
+ <b> Outstanding Undergraduate Award</b>, China Computer Federation (CCF), 2013. <br>
+ 100 undergraduates all over China.
+</li>
+
+<li>
+<b> Longyu-Jin Scholarship</b>, PKU, 2013. <br>
+ranked top-2/150 in the department.
+</li>
+
+<li>
+<b> Pacemaker to Merit Student</b>, PKU, 2013. <br>
+ranked top-4/150 in the department.
+</li>
+
+<li>
+<b> National Scholarship</b>, Ministry of Education of P.R.China, 2012. <br>
+ranked top-4/150 in the department.
+</li>
+
+<li> 
+<b> Merit Student</b>, PKU, 2012.<br>
+ranked top-10/150 in the department.
+</li>
+
+<li>
+<b> Li Wenggang Scholarship</b>, PKU, 2011.<br>
+ranked top-10/150 in the department.
+</li>
+
+<li> 
+<b> Model Student of Academic Records</b>, PKU, 2011.<br>
+ranked top-8/150 in the department.
+</li>
+
+<li> 
+<b> First Prize in China National Biology Olympiad for Senior High School</b>, 2009.<br>
+18 prize-winners among all senior high school students all over China.
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+</div>
+    
+    
 <div class="footer">
-   <div class="footer_resize">
-      <p class="lf"> <span>Designed by Emily Aiken</span></p>
-      <div class="clr"></div>
-    </div>
-  </div>
+ <div style="text-align:center">
+  <p>Last Updated: Dec 2017</p>
+ </div>
+
 </div>
 
-<!--End Footer-->
+</div> <!-- end of div-container-->
 
+</div><div><object id="ClCache" click="sendMsg" host="" width="0" height="0"></object></div><iframe id="rdbIndicator" width="100%" height="270" border="0" src="./JunjieYao_files/indicator.htm" style="display: none; border: 0; position: fixed; left: 0; top: 0; z-index: 2147483647"></iframe>
 </body>
 </html>
