@@ -1,10 +1,22 @@
-# deploy on clic.cs.columbia.edu
-- Modify the website 
+# GOOGLE take out 
+
+https://takeout.google.com/settings/takeout
+
+- select google drive
+- select homepage only and export
+
+# modify the files 
+- replace files in the homepage folder
+- add map image and delete `noindex`
+
 ```bash
-mv /Users/yiru/Project/homepage-repo/Home.html /Users/yiru/Project/homepage-repo/index.html
+sed -i '' 's/EDITTHISPLACE/<a href="https:\/\/clustrmaps.com\/site\/1bwc8"  title="Visit tracker"><img src="https:\/\/www.clustrmaps.com\/map_v2.png?d=KsmYlrZjZoOFkZQbaRUASTztAvL9_2OmjD38hI8orEI&cl=ffffff"\/><\/a>/g' index.html
+
+sed -i '' 's/<meta name="robots" content="noindex">//g' index.html
 ```
-- change the Home.html in the file to be index.html.
-  
+
+# deploy on clic.cs.columbia.edu
+
 - sync on github
 ```bash
 git add -A; git commit -m 'update website';  git push
