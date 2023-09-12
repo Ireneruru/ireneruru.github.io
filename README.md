@@ -13,6 +13,10 @@ https://takeout.google.com/settings/takeout
 sed -i '' 's/EDITTHISPLACE/<a href="https:\/\/clustrmaps.com\/site\/1bwc8"  title="Visit tracker"><img src="https:\/\/www.clustrmaps.com\/map_v2.png?d=KsmYlrZjZoOFkZQbaRUASTztAvL9_2OmjD38hI8orEI&cl=ffffff"\/><\/a>/g' index.html
 
 sed -i '' 's/<meta name="robots" content="noindex">//g' index.html
+sed -i '' 's/<meta name="robots" content="noindex">//g' Project.html
+sed -i '' 's/<meta name="robots" content="noindex">//g' TSExplain.html
+sed -i '' 's/<meta name="robots" content="noindex">//g' Precision\ Interface.html
+
 ```
 
 # deploy on clic.cs.columbia.edu
