@@ -30,7 +30,11 @@ git add -A; git commit -m 'update website';  git push
 ssh chen1ru@clic.cs.columbia.edu
 ```
 ```bash
-cd homepage; git pull; cd ..
+cd homepage; git pull
+```
+
+```bash
+cd ..
 rm -rf  secure_html/*
 cp -r homepage/* secure_html/
 chmod --recursive 777 secure_html/
